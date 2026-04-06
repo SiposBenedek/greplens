@@ -1,0 +1,423 @@
+/* ========================
+   Variables & Base
+   ======================== */
+:root {
+  --white-1: #F9F7F7;
+  --white-2: #DBE2EF;
+  --blue-1: #3F72AF;
+  --blue-2: #112D4E;
+  --black: #292929;
+}
+
+body {
+  font-family: "Inter", sans-serif; 
+  background-color: var(--black);
+  color: var(--white-1);
+}
+
+.text-muted {
+  color: rgba(249, 247, 247, 0.5) !important;
+}
+
+/* ========================
+   Utility Classes
+   ======================== */
+.bg-blue-1 {
+  background-color: var(--blue-1) !important;
+}
+
+.bg-white-2 {
+  background-color: var(--white-2) !important;
+}
+
+/* ========================
+   Navbar
+   ======================== */
+.navbar {
+  background-color: var(--blue-2);
+  border-bottom: 1px solid rgba(63, 114, 175, 0.3);
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.navbar-brand:hover {
+  opacity: 0.85;
+}
+
+.navbar-title {
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  color: var(--white-1);
+}
+
+.nav-link {
+  color: rgba(249, 247, 247, 0.65);
+  font-size: 0.9rem;
+  padding: 0.4rem 0.85rem !important;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+  margin: 0 10px 0 0;
+}
+
+.nav-link:hover {
+  color: var(--white-1);
+  background-color: rgba(63, 114, 175, 0.2);
+}
+
+.nav-link-active {
+  color: var(--white-1) !important;
+  background-color: rgba(63, 114, 175, 0.25);
+}
+
+/* ========================
+   Sidebar
+   ======================== */
+.sidebar {
+  background-color: var(--blue-2);
+  min-height: calc(100vh - 56px);
+  border-right: 1px solid rgba(63, 114, 175, 0.3);
+}
+
+.sidebar-heading {
+  color: var(--blue-1);
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  padding: 1rem 1rem 0.75rem;
+  border-bottom: 1px solid rgba(63, 114, 175, 0.2);
+}
+
+.sidebar .accordion-button {
+  background-color: var(--blue-2);
+  color: var(--white-1);
+  font-size: 0.85rem;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(63, 114, 175, 0.2);
+  box-shadow: none;
+  align-items: center;
+}
+
+.sidebar .accordion-button::after {
+  flex-shrink: 0;
+  margin-left: 0;
+  filter: invert(1) brightness(0.7);
+}
+
+.sidebar .accordion-button:not(.collapsed) {
+  background-color: rgba(63, 114, 175, 0.15);
+  color: var(--white-1);
+}
+
+.sidebar .accordion-button:hover {
+  background-color: rgba(63, 114, 175, 0.2);
+}
+
+.sidebar .accordion-item {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(63, 114, 175, 0.15);
+}
+
+.sidebar .accordion-body {
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 0;
+}
+
+.sidebar .badge {
+  background-color: rgba(63, 114, 175, 0.4) !important;
+  color: var(--white-1);
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+
+/* ========================
+   Sidebar Rule Links
+   ======================== */
+.sidebar-rule-link {
+  display: block;
+  padding: 0.55rem 1rem 0.55rem 1.75rem;
+  font-size: 0.82rem;
+  text-decoration: none;
+  color: rgba(249, 247, 247, 0.65);
+  border-left: 3px solid transparent;
+  transition: all 0.15s ease;
+}
+
+.sidebar-rule-link:hover {
+  color: var(--white-1);
+  background-color: rgba(63, 114, 175, 0.15);
+  border-left-color: var(--blue-1);
+}
+
+.sidebar-rule-link.active {
+  color: var(--white-1);
+  background-color: rgba(63, 114, 175, 0.25);
+  border-left-color: var(--blue-1);
+  font-weight: 500;
+}
+
+/* ========================
+   Buttons
+   ======================== */
+.btn-primary {
+  background-color: var(--blue-1);
+  border-color: var(--blue-1);
+  color: var(--white-1);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:focus-visible {
+    background-color: #5a8ec4;
+    border-color: #5a8ec4;
+}
+
+.btn-outline-secondary {
+  color: rgba(249, 247, 247, 0.6);
+  border-color: rgba(249, 247, 247, 0.2);
+}
+
+.btn-outline-secondary:hover {
+  background-color: rgba(249, 247, 247, 0.08);
+  border-color: rgba(249, 247, 247, 0.35);
+  color: var(--white-1);
+}
+
+/* ========================
+   Misc
+   ======================== */
+.breadcrumb-item.active {
+  color: var(--white-1);
+}
+
+
+/* ========================
+   Code Editor
+   ======================== */
+.editor-header {
+  background-color: var(--black-2);
+  border-bottom: 1px solid rgba(63, 114, 175, 0.3);
+  flex-shrink: 0;
+}
+
+.editor-panel {
+  overflow: hidden;
+  min-width: 0;
+}
+
+.panel-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--blue-1);
+  padding: 0.5rem 1rem;
+  background-color: rgba(17, 45, 78, 0.6);
+  border-bottom: 1px solid rgba(63, 114, 175, 0.2);
+  flex-shrink: 0;
+}
+
+.panel-divider {
+  width: 1px;
+  background-color: rgba(63, 114, 175, 0.25);
+  flex-shrink: 0;
+}
+
+.editor-panel .CodeMirror {
+  height: 100%;
+  flex: 1;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.cm-highlight-match {
+  background-color: rgba(255, 100, 100, 0.25);
+}
+
+.results-panel {
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #151f2e;
+  height: 100%;
+}
+
+.match-card {
+  background-color: rgba(220, 53, 69, 0.08);
+  border: 1px solid rgba(220, 53, 69, 0.25);
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.match-card .match-lines {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  white-space: pre;
+  overflow-x: auto;
+  color: #f8a4a4;
+}
+
+.error-card {
+  background-color: rgba(255, 193, 7, 0.08);
+  border: 1px solid rgba(255, 193, 7, 0.25);
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.no-matches {
+  color: #5cb85c;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* ========================
+   Rules Table
+   ======================== */
+.rules-table {
+  background-color: transparent;
+  font-size: 0.875rem;
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--white-1);
+  --bs-table-hover-bg: rgba(63, 114, 175, 0.1);
+  --bs-table-hover-color: var(--white-1);
+}
+
+.rules-table thead th {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid rgba(63, 114, 175, 0.25);
+  padding: 0.75rem;
+  font-weight: 600;
+}
+
+.rules-table tbody tr {
+  border-bottom: 1px solid rgba(63, 114, 175, 0.1);
+  transition: background-color 0.1s ease;
+}
+
+.rules-table tbody td {
+  padding: 0.75rem;
+  border: none;
+}
+
+.rules-table .form-select,
+.rules-table .form-control {
+  font-size: 0.85rem;
+}
+
+/* ========================
+   Form Controls (dark theme)
+   ======================== */
+.form-control,
+.form-select {
+  background-color: var(--black) !important;
+  color: var(--white-1) !important;
+  color-scheme: dark;
+}
+
+.form-control::placeholder {
+  color: rgba(249, 247, 247, 0.35);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: rgba(255,255,255,0.05) !important;
+  border-color: var(--blue-1);
+  box-shadow: 0 0 0 0.2rem rgba(63, 114, 175, 0.25);
+  color: var(--white-1) !important;
+}
+
+.form-select option {
+  background-color: var(--black);
+  color: var(--white-1);
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23F9F7F7' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+/* ========================
+   Pagination (dark)
+   ======================== */
+.pagination {
+  --bs-pagination-bg: transparent;
+  --bs-pagination-color: var(--white-1);
+  --bs-pagination-border-color: rgba(63, 114, 175, 0.25);
+  --bs-pagination-hover-bg: rgba(63, 114, 175, 0.2);
+  --bs-pagination-hover-color: var(--white-1);
+  --bs-pagination-hover-border-color: rgba(63, 114, 175, 0.4);
+  --bs-pagination-active-bg: var(--blue-1);
+  --bs-pagination-active-border-color: var(--blue-1);
+  --bs-pagination-active-color: var(--white-1);
+  --bs-pagination-disabled-bg: transparent;
+  --bs-pagination-disabled-color: rgba(249, 247, 247, 0.25);
+  --bs-pagination-disabled-border-color: rgba(63, 114, 175, 0.15);
+  --bs-pagination-focus-box-shadow: 0 0 0 0.2rem rgba(63, 114, 175, 0.25);
+}
+
+/* ========================
+   Stat Cards (Dashboard)
+   ======================== */
+.stat-card {
+  background-color: rgba(17, 45, 78, 0.3);
+  border: 1px solid rgba(63, 114, 175, 0.2);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--blue-1);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0.25rem;
+}
+
+.stat-secondary {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(249, 247, 247, 0.5);
+}
+
+.stat-hint {
+  font-size: 0.75rem;
+  color: rgba(249, 247, 247, 0.5);
+}
+
+/* ========================
+   Finding Cards
+   ======================== */
+.finding-card {
+  background-color: rgba(17, 45, 78, 0.3);
+  border: 1px solid rgba(63, 114, 175, 0.2);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+}
+
+.finding-code {
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.8rem;
+  white-space: pre;
+  overflow-x: auto;
+  color: #f8a4a4;
+}
