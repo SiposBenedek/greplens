@@ -1,11 +1,21 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "siposbenedek/greplens",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "A self-hosted web dashboard for managing OpenGrep security rules, running scans via CI/CD, and reviewing static analysis findings.",
     "keywords": [
         "laravel",
-        "framework"
+        "php",
+        "opengrep",
+        "static-analysis",
+        "sast",
+        "security",
+        "code-scanning",
+        "ci-cd",
+        "dashboard",
+        "self-hosted",
+        "yaml",
+        "devtools"
     ],
     "license": "MIT",
     "require": {
