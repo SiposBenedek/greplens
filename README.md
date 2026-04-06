@@ -86,14 +86,14 @@ Set your database credentials in `.env`:
 DB_DATABASE=greplens
 DB_USERNAME=root
 DB_PASSWORD=secret
-`
+```
 
 If you have OpenGrep installed, enable it:
 
-`env
+```env
 OPENGREP_ENABLED=true
 OPENGREP_BINARY=PATH_TO_BINARY
-`
+```
 
 ---
 
@@ -123,7 +123,7 @@ Rules can be created manually through the web UI or bulk-imported from ZIP files
 
 Run the following commands in your pipeline using your project’s API key:
 
-`bash
+```bash
 # Fetch rules from your Greplens instance and run them on the project
 opengrep scan --config http://your-instance/api/rules?key=glp_xxxx --json-output results.json -q
 
@@ -132,7 +132,7 @@ curl -X POST http://your-instance/api/findings \
   -H "Content-Type: application/json" \
   -H "X-Api-Key: glp_xxxx" \
   -d @results.json
-`
+```
 
 ---
 
@@ -152,9 +152,9 @@ Authentication is supported via:
 
 ## Testing
 
-`bash
+```bash
 php artisan test
-`
+```
 
 ---
 
